@@ -130,7 +130,9 @@ function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   var box = document.getElementById('filter'); 
 input = box.options[box.selectedIndex];
+  alert(input);
   filter = input.value();
+  alert(filter);
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
