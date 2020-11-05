@@ -1,4 +1,4 @@
-{"songs":[
+[
     {"title": "My Life", "album": "single", "artist": "Bravo The Bagchaser", "genre": "Rap/Hip-Hop ", "releaseDate":"04/04/18", "duration":"2:09"},
     {"title": "Change Ya Life","album": "Mafia Bidness", "artist": "Shoreline Mafia ", "genre": "Rap/Hip-Hop", "releaseDate":"07/31/20", "duration":"2:40"},
     {"title": "Do For Love","album": "R u Still Down?", "artist": "2Pac", "genre": "Rap/Hip-Hop", "releaseDate":"1996", "duration":"3:10"},
@@ -9,4 +9,4 @@
     {"title": "Heartbreak Anniversary","album": "Take Time", "artist": "Giveon", "genre": "R&B", "releaseDate":"2020", "duration":"3:16"},
     {"title": "44 BullDog","album": "Shoot For The Stars Aim For The Moon", "artist": "Pop Smoke", "genre": "Rap/Hip-Hop", "releaseDate":"2020", "duration":"2:30"},
     {"title": "Yea Yea","album": "Shoot For The Stars Aim For The Moon", "artist": "Pop Smoke", "genre": "Rap/Hip-Hop", "releaseDate":"2020", "duration":"3:05"}       
-]}
+]
