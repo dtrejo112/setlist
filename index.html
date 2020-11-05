@@ -1,49 +1,100 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
-
-<script>
-
-    $(function() {
-
-
-   var setlist = [];
-   
-
-   $.getJSON('setlist.json', function(data) {
-       $.each(data.songs, function(i, f) {
-          var tblRow = "<tr>" + "<td>" + f.title + "</td>" +
-           "<td>" + f.album + "</td>" + "<td>" + f.artist + "</td>" + "<td>" + f.genre + "</td>" + "</tr>"
-           $(tblRow).appendTo("#userdata tbody");
-     });
-
-   });
-
-});
-</script>
-</head>
-
-<body>
-
-<div class="wrapper">
-<div class="profile">
-   <table id= "userdata" border="2">
-  <thead>
-            <th>Title</th>
-            <th>Album</th>
-            <th>Artist</th>
-            <th>Genre</th>
-        </thead>
-      <tbody>
-
-       </tbody>
-   </table>
-
-</div>
-</div>
-
-</body>
-</html>
-
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <title>GFG User Details</title> 
+  
+    <!-- INCLUDING JQUERY-->
+    <script src= 
+"https://code.jquery.com/jquery-3.5.1.js"> 
+    </script> 
+  
+    <!-- CSS FOR STYLING THE PAGE -->
+    <style> 
+        table { 
+            margin: 0 auto; 
+            font-size: large; 
+            border: 1px solid black; 
+        } 
+  
+        h1 { 
+            text-align: center; 
+            color: #006600; 
+            font-size: xx-large; 
+            font-family: 'Gill Sans',  
+                'Gill Sans MT', ' Calibri',  
+                'Trebuchet MS', 'sans-serif'; 
+        } 
+  
+        td { 
+            background-color: #E4F5D4; 
+            border: 1px solid black; 
+        } 
+  
+        th, 
+        td { 
+            font-weight: bold; 
+            border: 1px solid black; 
+            padding: 10px; 
+            text-align: center; 
+        } 
+  
+        td { 
+            font-weight: lighter; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <section> 
+        <h1> Set List</h1> 
+  
+        <!-- TABLE CONSTRUCTION-->
+        <table id='table'> 
+            <!-- HEADING FORMATION -->
+            <tr> 
+                <th>Title</th> 
+                <th>Practice Problems</th> 
+                <th>Coding Score</th> 
+                <th>GFG Articles</th> 
+            </tr> 
+  
+            <script> 
+                $(document).ready(function () { 
+  
+                    // FETCHING DATA FROM JSON FILE 
+                    $.getJSON("setlist.json",  
+                            function (data) { 
+                        var song = ''; 
+  
+                        // ITERATING THROUGH OBJECTS 
+                        $.each(data, function (key, value) { 
+  
+                            //CONSTRUCTION OF ROWS HAVING 
+                            // DATA FROM JSON OBJECT 
+                            song += '<tr>'; 
+                            song += '<td>' +  
+                                value.title + '</td>'; 
+  
+                            song += '<td>' +  
+                                value.album + '</td>'; 
+  
+                            song += '<td>' +  
+                                value.artist + '</td>'; 
+  
+                            song += '<td>' +  
+                                value.genre + '</td>'; 
+  
+                            song += '</tr>'; 
+                        }); 
+                          
+                        //INSERTING ROWS INTO TABLE  
+                        $('#table').append(song); 
+                    }); 
+                }); 
+            </script> 
+    </section> 
+</body> 
+  
 </html>
