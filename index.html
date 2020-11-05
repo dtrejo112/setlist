@@ -20,8 +20,7 @@
   margin-bottom: 12px;
 }
   </style>
-  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-    <!-- INCLUDING JQUERY-->
+ 
     <script src= 
 "https://code.jquery.com/jquery-3.5.1.js"> 
     </script> 
@@ -66,7 +65,7 @@
 <body> 
     <section> 
         <h1> Set List</h1> 
-      
+       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
         <!-- TABLE CONSTRUCTION-->
         <table id='table'> 
             <!-- HEADING FORMATION -->
@@ -128,7 +127,7 @@ function myFunction() {
     td = tr[i].getElementsByTagName("td")[3];
     if (td) {
       txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      if (txtValue.indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
