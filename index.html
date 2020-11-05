@@ -65,7 +65,15 @@
 <body> 
     <section> 
         <h1> Set List</h1> 
-       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+      <form> 
+         <select id="filter">
+           <option value="R&B">R&B</option>
+           <option value="Rap/Hip-Hop">Rap/Hip-Hop</option>
+           <option value="Mexican Regional">Mexican Regional</option>
+         </select>
+         <input type="button" id="myInput" onclick="myFunction()"  title="Filter">
+      </form>
+      
         <!-- TABLE CONSTRUCTION-->
         <table id='table'> 
             <!-- HEADING FORMATION -->
@@ -119,8 +127,9 @@
           <script>
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
+  var box = document.getElementById('filter'); 
+input = box.options[box.selectedIndex];
+  filter = input.value();
   table = document.getElementById("table");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
